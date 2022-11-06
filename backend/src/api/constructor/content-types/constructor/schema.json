@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "constructors",
+  "info": {
+    "singularName": "constructor",
+    "pluralName": "constructors",
+    "displayName": "Constructor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "preview": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "stairs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "modules.dresser"
+    },
+    "cupboard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "modules.dresser"
+    }
+  }
+}
