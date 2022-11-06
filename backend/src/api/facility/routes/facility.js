@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * constructor router
+ * facility router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::constructor.constructor');
+module.exports = createCoreRouter('api::facility.facility');

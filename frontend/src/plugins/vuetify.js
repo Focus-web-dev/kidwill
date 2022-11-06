@@ -1,7 +1,10 @@
 import "vuetify/styles";
+
 import { createVuetify } from "vuetify";
+
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
+import colors from "vuetify/lib/util/colors";
 
 export default createVuetify({
   components,
@@ -9,16 +12,25 @@ export default createVuetify({
   theme: {
     themes: {
       light: {
-        dark: false,
+        dark: true,
         colors: {
-          primary: "#222831",
-          secondary: "#30475E",
+          primary: colors.blue.base,
+          secondary: colors.lightBlue.base,
           error: "#eb5757",
           success: "#549920",
-          surface: "#DDDDDD",
-          background: "#F05454",
+          background: "#212121",
         },
       },
+    },
+  },
+  display: {
+    mobileBreakpoint: "sm",
+    thresholds: {
+      xs: 0,
+      sm: 320,
+      md: 676,
+      lg: 1264,
+      xl: 1280,
     },
   },
 });

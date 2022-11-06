@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * constructor service
+ * facility service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::constructor.constructor');
+module.exports = createCoreService('api::facility.facility');
