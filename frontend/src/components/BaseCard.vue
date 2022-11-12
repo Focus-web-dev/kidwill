@@ -1,47 +1,43 @@
 <template>
-  <v-card
-    min-width="280"
-    class="bg-background rounded-0"
-    variant="tonal"
-  >
-    <v-img
-      v-if="props.image"
+  <div class="base-card base-shadow">
+    <img
       :src="props.image"
-      height="300px"
-      class="mb-3"
-      cover
-    ></v-img>
+      class="base-card__preview"
+    />
+    <div class="base-card__content">
+      <div>
+        <h3 v-if="props.title">{{ props.title }}</h3>
+        <p v-if="props.description">{{ props.description }}</p>
+      </div>
 
-    <v-card-title
-      v-if="props.title"
-      class="mb-3"
-    >
-      {{ props.title }}
-    </v-card-title>
-
-    <v-card-actions class="pl-4 mb-3">
-      <v-btn
-        color="primary"
-        variant="outlined"
+      <button
+        v-if="props.buttonLabel"
+        class="base-button"
         @click="onAction"
       >
-        {{ buttonLabel }}
-      </v-btn>
-    </v-card-actions>
-  </v-card>
+        {{ props.buttonLabel }}
+      </button>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import { defineProps, defineEmits } from "vue";
 
 const props = defineProps({
-  title: {
+  image: {
     type: String,
-    required: false,
+    required: true,
     default: null,
   },
 
-  image: {
+  title: {
+    type: String,
+    required: true,
+    default: null,
+  },
+
+  description: {
     type: String,
     required: false,
     default: null,
@@ -60,3 +56,58 @@ const onAction = () => {
   emit("action");
 };
 </script>
+
+<style lang="scss">
+@import "@/assets/sass/global/vars.scss";
+
+.base-card {
+  display: flex;
+  flex-direction: row;
+
+  &__preview {
+    width: 40%;
+    background-color: $primary;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 60%;
+    padding: 24px;
+
+    background-color: $white;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        margin-bottom: 14px;
+      }
+    }
+
+    button {
+      margin-top: 24px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    flex-direction: column;
+
+    &__preview {
+      width: 100%;
+    }
+
+    &__content {
+      width: 100%;
+    }
+  }
+}
+</style>

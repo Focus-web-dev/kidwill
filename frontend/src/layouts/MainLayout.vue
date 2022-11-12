@@ -1,12 +1,20 @@
 <template>
-  <v-layout>
-    <v-app-bar>
-      <v-app-bar-title>Kidwill</v-app-bar-title>
-    </v-app-bar>
-    <v-main>
-      <v-container>
+  <div class="main-layout">
+    <MainHeader />
+    <div class="container">
+      <div class="main-layout__content">
         <router-view />
-      </v-container>
-    </v-main>
-  </v-layout>
+      </div>
+    </div>
+  </div>
 </template>
+
+<script setup>
+import MainHeader from "@/components/MainHeader.vue";
+</script>
+
+<style lang="scss">
+.main-layout__content {
+  margin-top: 50px;
+}
+</style>

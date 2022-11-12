@@ -1,0 +1,33 @@
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 9999;
+    overflow: hidden;
+
+    background-color: $gray;
+
+    &__circle {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 50px;
+        width: 50px;
+
+        border: 2px solid $blue;
+        border-radius: 50%;
+        border-right-color: transparent;
+        border-top-color: transparent;
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_headers",
+  "info": {
+    "singularName": "global-header",
+    "pluralName": "global-headers",
+    "displayName": "Global Header",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logotype": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}

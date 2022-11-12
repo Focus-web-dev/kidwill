@@ -30,6 +30,10 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::type.type"
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 225
     }
   }
 }
