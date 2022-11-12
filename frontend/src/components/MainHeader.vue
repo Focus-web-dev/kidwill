@@ -4,12 +4,16 @@
       <div class="header-content">
         <RouterLink to="/">
           <img
-            :src="logotype"
+            :src="imageSrc(headerData.data?.data?.attributes?.logotype?.data?.attributes?.url)"
             class="header-content__logo"
+            :class="{ 'lazy-loading': isLoading }"
+            @load="isLoading = false"
           />
         </RouterLink>
 
-        <PhoneCall :phone="phone" />
+        <div class="phone">
+          <a :href="`tel:${phoneWithoutSymbols}`">{{ headerData.data?.data?.attributes?.phone }}</a>
+        </div>
       </div>
     </div>
   </div>
@@ -17,22 +21,19 @@
 
 <script setup>
 import { globalHeader } from "@/services/headerAPI";
-import { ref, onBeforeMount } from "vue";
+import { ref, computed } from "vue";
 
 import imageSrc from "@/helpers/imageSrc";
-import PhoneCall from "@/components/PhoneCall.vue";
 
-const logotype = ref("");
-const phone = ref("");
+const headerData = ref(await globalHeader());
+const phoneWithoutSymbols = computed(() => headerData.value.data?.data?.attributes?.phone.replace(/\D+/g, ""));
 
-onBeforeMount(async () => {
-  const response = await globalHeader();
-  logotype.value = imageSrc(response.data?.data?.attributes?.logotype?.data?.attributes?.url);
-  phone.value = response.data?.data?.attributes?.phone;
-});
+const isLoading = ref(true);
 </script>
 
 <style lang="scss">
+@import "@/assets/sass/global/vars.scss";
+
 .header {
   .header-content {
     display: flex;
@@ -43,7 +44,30 @@ onBeforeMount(async () => {
     padding: 12px 0;
 
     &__logo {
-      max-height: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  a {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4em;
+
+    transition: color 0.1s ease-in-out;
+
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      animation: errorShaking 0.3s;
+      color: $primary;
     }
   }
 }
