@@ -2,7 +2,7 @@
   <div class="base-card base-shadow">
     <img
       :src="props.image"
-      class="base-card__preview"
+      class="base-card__preview lazy-loading"
     />
     <div class="base-card__content">
       <div>
@@ -66,7 +66,6 @@ const onAction = () => {
 
   &__preview {
     width: 40%;
-    background-color: $primary;
     object-fit: cover;
   }
 
