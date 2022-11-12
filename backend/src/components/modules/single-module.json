@@ -1,5 +1,5 @@
 {
-  "collectionName": "components_stairs_dressers",
+  "collectionName": "components_modules_single_modules",
   "info": {
     "displayName": "singleModule",
     "description": ""
@@ -10,18 +10,17 @@
       "type": "string"
     },
     "price": {
-      "type": "string"
-    },
-    "active": {
-      "type": "boolean",
-      "default": false
+      "type": "decimal"
     },
     "image": {
       "type": "media",
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos",
+        "audios"
       ]
     }
   }
