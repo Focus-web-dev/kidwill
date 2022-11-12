@@ -2,10 +2,12 @@
   <div class="header base-shadow">
     <div class="container">
       <div class="header-content">
-        <img
-          :src="logotype"
-          class="header-content__logo"
-        />
+        <RouterLink to="/">
+          <img
+            :src="logotype"
+            class="header-content__logo"
+          />
+        </RouterLink>
 
         <PhoneCall :phone="phone" />
       </div>
