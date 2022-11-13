@@ -3,7 +3,7 @@
     <div class="design-selection">
       <h1 class="design-selection__title">Выберите дизайн</h1>
 
-      <Transition name="slide-fade">
+      <Transition name="list">
         <Suspense>
           <template #default>
             <FacilitiesList />

@@ -24,6 +24,7 @@ import MainHeaderLazy from "@/components/MainHeaderLazy.vue";
 
 <style lang="scss">
 .main-layout__content {
-  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 </style>
