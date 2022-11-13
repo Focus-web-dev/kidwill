@@ -45,6 +45,11 @@ const isLoading = ref(true);
 
     &__logo {
       height: 50px;
+
+      &:hover {
+        animation: errorShaking 0.3s;
+        color: $primary;
+      }
     }
   }
 }
