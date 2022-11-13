@@ -5,10 +5,11 @@
 
       <Suspense>
         <template #default>
-          <DesignsList />
+          <CardsGroupList />
         </template>
+
         <template #fallback>
-          <DesignsListLazy />
+          <CardsGroupListLazy />
         </template>
       </Suspense>
     </div>
@@ -16,8 +17,8 @@
 </template>
 
 <script setup>
-import DesignsList from "@/components/DesignsList.vue";
-import DesignsListLazy from "@/components/DesignsListLazy.vue";
+import CardsGroupList from "@/components/card/CardsGroupList/CardsGroupList.vue";
+import CardsGroupListLazy from "@/components/card/CardsGroupList/CardsGroupListLazy.vue";
 </script>
 
 <style lang="scss">

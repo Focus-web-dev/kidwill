@@ -6,10 +6,10 @@ export default {
   },
 
   actions: {
-    async getDesigns(ctx) {
+    async fetchDesigns(ctx) {
       try {
         const response = await designsList();
-        ctx.commit("updateDesigns", response.data.data);
+        ctx.commit("updateDesigns", response?.data?.data);
       } catch (error) {
         ctx.commit("updateDesigns", null);
       }
