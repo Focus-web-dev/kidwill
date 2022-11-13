@@ -1,12 +1,12 @@
 {
-  "collectionName": "components_modules_single_modules",
+  "collectionName": "components_module_module_items",
   "info": {
-    "displayName": "singleModule",
+    "displayName": "ModuleItem",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "label": {
+    "title": {
       "type": "string"
     },
     "price": {
@@ -17,11 +17,11 @@
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
+    },
+    "capability": {
+      "type": "json"
     }
   }
 }

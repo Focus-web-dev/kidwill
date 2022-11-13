@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groups",
+  "info": {
+    "singularName": "group",
+    "pluralName": "groups",
+    "displayName": "Group"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "group_label": {
+      "type": "string"
+    },
+    "group_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "module.module-item"
+    }
+  }
+}

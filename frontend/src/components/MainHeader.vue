@@ -1,5 +1,8 @@
 <template>
-  <div class="header base-shadow">
+  <div
+    v-if="headerData"
+    class="header base-shadow"
+  >
     <div class="container">
       <div class="header-content">
         <RouterLink to="/">

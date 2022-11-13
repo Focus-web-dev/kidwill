@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import facilities from "@/store/modules/facilities";
+import designs from "@/store/modules/designs";
 
 export default createStore({
   state: {},
@@ -7,6 +7,6 @@ export default createStore({
   mutations: {},
   actions: {},
   modules: {
-    facilities,
+    designs,
   },
 });

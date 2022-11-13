@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "facilities",
+  "collectionName": "designs",
   "info": {
-    "singularName": "facility",
-    "pluralName": "facilities",
-    "displayName": "Facility",
+    "singularName": "design",
+    "pluralName": "designs",
+    "displayName": "Design",
     "description": ""
   },
   "options": {
@@ -15,25 +15,21 @@
     "title": {
       "type": "string"
     },
+    "description": {
+      "type": "text"
+    },
     "preview": {
       "type": "media",
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "types": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::type.type"
-    },
-    "description": {
-      "type": "text",
-      "maxLength": 225
     }
   }
 }
