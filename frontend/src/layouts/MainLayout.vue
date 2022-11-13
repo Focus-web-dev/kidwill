@@ -18,8 +18,8 @@
 </template>
 
 <script setup>
-import MainHeader from "@/components/MainHeader.vue";
-import MainHeaderLazy from "@/components/MainHeaderLazy.vue";
+import MainHeader from "@/components/global/header/MainHeader.vue";
+import MainHeaderLazy from "@/components/global/header/MainHeaderLazy.vue";
 </script>
 
 <style lang="scss">
