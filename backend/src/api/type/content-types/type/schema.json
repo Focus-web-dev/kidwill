@@ -15,10 +15,10 @@
     "title": {
       "type": "string"
     },
-    "cupboard": {
-      "type": "component",
-      "repeatable": true,
-      "component": "modules.single-module"
+    "groups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::group.group"
     }
   }
 }

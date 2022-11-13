@@ -1,5 +1,5 @@
 <template>
-  <div class="facilities-list">
+  <div class="designs-list">
     <BaseCardLazy
       v-for="index in 3"
       :key="index"
@@ -12,7 +12,7 @@ import BaseCardLazy from "@/components/BaseCardLazy.vue";
 </script>
 
 <style lang="scss" scoped>
-.facilities-list {
+.designs-list {
   display: flex;
   flex-direction: column;
 }

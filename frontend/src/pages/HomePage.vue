@@ -3,23 +3,21 @@
     <div class="design-selection">
       <h1 class="design-selection__title">Выберите дизайн</h1>
 
-      <Transition name="list">
-        <Suspense>
-          <template #default>
-            <FacilitiesList />
-          </template>
-          <template #fallback>
-            <FacilitiesListLazy />
-          </template>
-        </Suspense>
-      </Transition>
+      <Suspense>
+        <template #default>
+          <DesignsList />
+        </template>
+        <template #fallback>
+          <DesignsListLazy />
+        </template>
+      </Suspense>
     </div>
   </div>
 </template>
 
 <script setup>
-import FacilitiesList from "@/components/FacilitiesList.vue";
-import FacilitiesListLazy from "@/components/FacilitiesListLazy.vue";
+import DesignsList from "@/components/DesignsList.vue";
+import DesignsListLazy from "@/components/DesignsListLazy.vue";
 </script>
 
 <style lang="scss">
