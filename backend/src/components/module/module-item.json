@@ -1,7 +1,7 @@
 {
   "collectionName": "components_module_module_items",
   "info": {
-    "displayName": "ModuleItem",
+    "displayName": "ModuleItems",
     "description": ""
   },
   "options": {},
@@ -19,9 +19,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "capability": {
-      "type": "json"
     }
   }
 }
