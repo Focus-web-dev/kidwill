@@ -29,6 +29,14 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::group.group"
+    },
+    "base": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

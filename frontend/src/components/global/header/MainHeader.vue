@@ -5,14 +5,14 @@
   >
     <div class="container">
       <div class="header-content">
-        <RouterLink to="/">
+        <router-link to="/">
           <img
             :src="imageSrc(headerData.data?.data?.attributes?.logotype?.data?.attributes?.url)"
             class="header-content__logo"
             :class="{ 'lazy-loading': isLoading }"
             @load="isLoading = false"
           />
-        </RouterLink>
+        </router-link>
 
         <div class="phone">
           <a :href="`tel:${phoneWithoutSymbols}`">{{ headerData.data?.data?.attributes?.phone }}</a>

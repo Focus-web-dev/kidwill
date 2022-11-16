@@ -26,5 +26,9 @@ export default {
     designsList(state) {
       return state.designs;
     },
+
+    designsTypesList(state) {
+      return state.designs?.map((design) => design?.attributes?.types?.data) || null;
+    },
   },
 };

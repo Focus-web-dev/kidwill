@@ -1,5 +1,6 @@
 import { createStore } from "vuex";
 import designs from "@/store/modules/designs";
+import types from "@/store/modules/types";
 
 export default createStore({
   state: {},
@@ -8,5 +9,6 @@ export default createStore({
   actions: {},
   modules: {
     designs,
+    types,
   },
 });

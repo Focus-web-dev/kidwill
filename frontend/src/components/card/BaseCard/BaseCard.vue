@@ -34,12 +34,16 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  cardId: {
+    type: Number,
+    required: true,
+  },
 });
 
 const imageUrl = computed(() => imageSrc(props.url));
 
 const emit = defineEmits(["action"]);
-const onAction = () => emit("action");
+const onAction = () => emit("action", props.cardId);
 </script>
 
 <style lang="scss">

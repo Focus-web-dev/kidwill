@@ -9,6 +9,7 @@ const APIErrorHandler = async (func) => {
     return response;
   } catch (error) {
     toast.error(errorMessages.default);
+    throw error;
   }
 };
 

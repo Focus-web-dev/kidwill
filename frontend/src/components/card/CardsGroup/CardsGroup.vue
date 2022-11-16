@@ -18,6 +18,8 @@
           :url="card?.attributes?.preview?.data?.attributes?.url"
           :alt="card?.attributes?.preview?.data?.attributes?.alternativeText"
           :title="card?.attributes?.title"
+          :cardId="card?.id"
+          @action="onCardAction"
         />
       </li>
     </ul>
@@ -26,7 +28,7 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, defineEmits } from "vue";
 
 import TitleDescription from "@/components/base/TitleDescription/TitleDescription.vue";
 import BaseCard from "@/components/card/BaseCard/BaseCard.vue";
@@ -42,11 +44,19 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  designId: {
+    type: Number,
+    required: true,
+  },
   cardsData: {
     type: Object,
     required: true,
   },
 });
+
+const emit = defineEmits(["cardAction"]);
+
+const onCardAction = (cardId) => emit("cardAction", cardId);
 </script>
 
 <style lang="scss">
