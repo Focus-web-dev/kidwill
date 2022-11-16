@@ -19,6 +19,11 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "z_index": {
+      "type": "integer",
+      "required": true,
+      "default": 0
     }
   }
 }
